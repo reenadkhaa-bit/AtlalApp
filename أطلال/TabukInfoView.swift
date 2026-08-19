@@ -1,18 +1,30 @@
 //
 //  TabukInfoView.swift
-//  أطلال
+//  AtlalApp
 //
-//  Created by reenad alkhamees on 28/02/1448 AH.
+//  Created by Norah H. AlDakheel on 21/02/1448 AH.
 //
 
 import SwiftUI
 
 struct TabukInfoView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Environment(\.dismiss) var dismiss
+    
 
+    var body: some View {
+        
+            ContentView(
+                cardTitle: "معلومة مميزة عن القلعة!",
+                cardDescription: "تحولت قلعة تبوك في الوقت الحالي إلى متحف مفتوح يعرض قطعًا أثرية وتراثية نادرة.",
+                
+                onBackButtonTapped: {
+                    dismiss()
+                }
+            )
+            
+        }
+    
+}
 #Preview {
     TabukInfoView()
 }
